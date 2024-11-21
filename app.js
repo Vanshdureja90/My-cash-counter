@@ -7,12 +7,13 @@ var currency = [500, 200, 100, 50, 20, 10, 5, 1];
 
 clickButton.addEventListener("click", function validateClickAmount(){
 //    hideMessage();
-    if(cashGiven.value >= billAmount.value){
+    if(cashGiven.value > 0){
         const amountToBeReturn = cashGiven.value - billAmount.value;
         calculateChange(amountToBeReturn);
         console.log("if")
     }else{
         showMesssage("The amount is lesser than the genrated bill amount.")
+        console.log("wlse")
     }
 })
 
@@ -32,3 +33,11 @@ function calculateChange(amountToBeReturn){
         noOfNotes[i].innerText = numberOfNotes;
     }
 }
+
+
+function play(a, b){
+    return a- b;
+}
+
+console.log(play(cashGiven.value, billAmount.value
+))
